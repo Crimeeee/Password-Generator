@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Pass Generator</title>
+</head>
+
+<body>
+
+  <main class="container" role="main" aria-labelledby="page-title">
+    <h1 id="page-title">Pass Generator</h1>
+
+    <section class="password-generator" aria-label="Password Generator Controls">
+      <div class="input-box" aria-live="polite" aria-atomic="true">
+        <input type="text" id="password-display" aria-label="Generated password" disabled />
+        <button type="button" class="copy-btn" aria-label="Copy password to clipboard">
+          <span class="material-symbols-rounded" aria-hidden="true">copy_all</span>
+        </button>
+      </div>
+
+      <div class="pass-indicator" aria-hidden="true"></div>
+
+      <div class="pass-length">
+        <label for="length-range" class="title">Password Length</label>
+        <input type="range" id="length-range" name="length" min="1" max="30" value="15" step="1" aria-valuemin="1" aria-valuemax="30" aria-valuenow="15" aria-label="Select password length" />
+        <span id="length-value" aria-live="polite" aria-atomic="true">15</span>
+      </div>
+
+      <fieldset class="pass-settings" aria-describedby="settings-description">
+        <legend class="title">Pass Settings</legend>
+        <p id="settings-description" class="sr-only">Select password options</p>
+        <ul class="options">
+          <li class="option">
+            <input type="checkbox" id="lowercase" name="lowercase" checked />
+            <label for="lowercase">Lowercase (a-z)</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" id="uppercase" name="uppercase" />
+            <label for="uppercase">Uppercase (A-Z)</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" id="numbers" name="numbers" />
+            <label for="numbers">Numbers (0-9)</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" id="symbols" name="symbols" />
+            <label for="symbols">Symbols (!-@*+)</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" id="exclude-duplicates" name="exclude-duplicates" />
+            <label for="exclude-duplicates">Exclude Duplicate</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" id="spaces" name="spaces" />
+            <label for="spaces">Include Spaces</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <button type="button" class="generate-btn" aria-label="Generate password">Generate Password</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+ 
