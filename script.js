@@ -53,14 +53,22 @@ const generatePassword = () => {
 }
 
 const updatePassIndicator = () => {
-    const length = +lengthSlider.value;
-    if (length <= 8) {
-        passIndicator.id = "weak";
-    } else if (length <= 16) {
-        passIndicator.id = "medium";
-    } else {
-        passIndicator.id = "strong";
-    }
+  const length = +lengthSlider.value;
+  const strengthText = document.getElementById("strength-text");
+
+  if (length <= 8) {
+    passIndicator.id = "weak";
+    strengthText.textContent = "Weak";
+    strengthText.style.color = "#e63946"; // Κόκκινο
+  } else if (length <= 16) {
+    passIndicator.id = "medium";
+    strengthText.textContent = "Medium";
+    strengthText.style.color = "#f4a261"; // Πορτοκαλί
+  } else {
+    passIndicator.id = "strong";
+    strengthText.textContent = "Very Strong";
+    strengthText.style.color = "#2a9d8f"; // Πράσινο
+  }
 }
 
 const updateSlider = () => {
