@@ -38,7 +38,7 @@ Generate strong passwords and copy them instantly with a single click! ✂️�
 
 1. Clone or download this repository:
    ```bash
-   git clone https://github.com/username/password-generator.git
+   git clone https://github.com/Crimeeee/password-generator.git
 
     Open index.html in your preferred web browser.
 
